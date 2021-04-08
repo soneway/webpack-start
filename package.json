@@ -13,6 +13,7 @@
   "devDependencies": {
     "css-loader": "^5.2.0",
     "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
     "strip-comments": "^2.0.1",
     "style-loader": "^2.0.0",
     "uglify-js": "^3.13.3",
