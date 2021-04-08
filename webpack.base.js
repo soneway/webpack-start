@@ -4,22 +4,17 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: {
-      import: './src/index.js',
-      dependOn: 'shared',
-    },
-    other: {
-      import: './src/other.js',
-      dependOn: 'shared',
-    },
-    shared: 'lodash',
+    index: './src/index.js',
+    other: './src/other.js',
   },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
-    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new CleanWebpackPlugin({
