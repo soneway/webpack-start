@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   devtool: false,
@@ -53,6 +54,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['dist'],
+    }),
     new HtmlWebpackPlugin({
       title: 'Output Management HAHAHA',
     }),
