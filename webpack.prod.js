@@ -5,10 +5,11 @@ const baseConf = require('./webpack.base');
 
 module.exports = merge(baseConf, {
   devtool: 'source-map',
+  mode: 'development',
   plugins: [
-    new UglifyJSPlugin({
-      sourceMap: true,
-    }),
+    // new UglifyJSPlugin({
+    //   sourceMap: true,
+    // }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('prod'),
     }),

@@ -3,7 +3,7 @@ const baseConf = require('./webpack.base');
 
 module.exports = merge(baseConf, {
   devtool: 'inline-source-map',
-  // mode: 'development',
+  mode: 'development',
   devServer: {
     contentBase: './dist',
   },
