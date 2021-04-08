@@ -4,8 +4,11 @@
 
 // console.log('xmlData', xmlData);
 
+import printMe from './print';
+
 function component() {
   var element = document.createElement('div');
+  const btn = document.createElement('button');
 
   element.innerHTML = 'Hello World';
   element.classList.add('hello');
@@ -13,6 +16,10 @@ function component() {
   // const logoImg = new Image();
   // logoImg.src = logo;
   // element.appendChild(logoImg);
+
+  btn.innerHTML = 'Click and console';
+  btn.onclick = printMe;
+  element.appendChild(btn);
 
   return element;
 }
