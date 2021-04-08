@@ -1,6 +1,3 @@
-async function component() {
-  const { default: _ } = await import('lodash');
-  console.log(_.join([1, 2, 3, 4], '&'));
-}
+import _ from 'lodash';
 
-component();
+console.log(_.join([1, 2, 3, 4, 5], '&'));
