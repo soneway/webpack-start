@@ -1,4 +1,4 @@
-// import './style.css';
+import './style.css';
 // import logo from './logo.png';
 // import xmlData from './xml.xml';
 
