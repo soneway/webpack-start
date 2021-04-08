@@ -7,7 +7,7 @@ module.exports = {
   devServer: {
     contentBase: './dist',
   },
-  mode: 'development',
+  mode: 'production',
   entry: {
     app: './src/index.js',
     // print: './src/print.js',
