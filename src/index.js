@@ -1,25 +1,12 @@
-import './style.css';
-// import logo from './logo.png';
-// import xmlData from './xml.xml';
-
-// console.log('xmlData', xmlData);
-
-import printMe from './print';
+import { cube } from './math';
 
 function component() {
-  var element = document.createElement('div');
-  const btn = document.createElement('button');
+  const element = document.createElement('pre');
 
-  element.innerHTML = 'Hello World';
-  element.classList.add('hello');
-
-  // const logoImg = new Image();
-  // logoImg.src = logo;
-  // element.appendChild(logoImg);
-
-  btn.innerHTML = 'Click and console';
-  btn.onclick = printMe;
-  element.appendChild(btn);
+  element.innerHTML = [
+    'Hello Webpack',
+    '5 cubed is ' + cube(5),
+  ].join('\n');
 
   return element;
 }
