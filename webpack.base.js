@@ -1,11 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
     index: './src/index.js',
-    other: './src/other.js',
+    // other: './src/other.js',
   },
   output: {
     filename: '[name].[chunkhash].js',
@@ -17,6 +18,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Production',
+    }),
+    new webpack.ProvidePlugin({
+      _: 'lodash',
     }),
   ],
   optimization: {
