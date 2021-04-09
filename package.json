@@ -16,6 +16,7 @@
     "./src/math.js"
   ],
   "devDependencies": {
+    "@types/lodash": "^4.14.168",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.2.0",
     "exports-loader": "^2.0.0",
@@ -24,6 +25,8 @@
     "http-server": "^0.12.3",
     "strip-comments": "^2.0.1",
     "style-loader": "^2.0.0",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.4",
     "uglify-js": "^3.13.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.31.0",

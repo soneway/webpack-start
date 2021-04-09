@@ -6,7 +6,7 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: './src/index.js',
+    index: './src/index.ts',
     // other: './src/other.js',
   },
   output: {
@@ -15,6 +15,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: require.resolve('./src/globals.js'),
         loader: 'exports-loader',
