@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --config webpack.dev.js",
+    "start": "http-server dist",
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
@@ -20,6 +21,7 @@
     "exports-loader": "^2.0.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "http-server": "^0.12.3",
     "strip-comments": "^2.0.1",
     "style-loader": "^2.0.0",
     "uglify-js": "^3.13.3",
