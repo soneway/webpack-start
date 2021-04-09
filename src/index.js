@@ -1,1 +1,4 @@
-console.log(_.join([1, 2, 3, 4, 5], '&'));
+import { file, helpers } from './globals';
+
+console.log(file);
+helpers.parse();

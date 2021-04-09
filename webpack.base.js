@@ -12,6 +12,17 @@ module.exports = {
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
   },
+  module: {
+    rules: [
+      {
+        test: require.resolve('./src/globals.js'),
+        loader: 'exports-loader',
+        options: {
+          exports: ['file', 'helpers'],
+        },
+      },
+    ],
+  },
   plugins: [
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ['dist'],
