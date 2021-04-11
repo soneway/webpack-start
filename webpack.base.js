@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const HelloWorldPlugin = require('./build/plugins/hello-world-plugin');
-const ScriptTsPlugin = require('./build/plugins/script-ts-plugin.js');
+const { FileListPlugin } = require('./build/plugins/file-list-plugin');
 
 module.exports = {
   entry: {
@@ -48,7 +48,7 @@ module.exports = {
     new HelloWorldPlugin({
       enable: true,
     }),
-    new ScriptTsPlugin({
+    new FileListPlugin({
       enable: true,
     }),
   ],
