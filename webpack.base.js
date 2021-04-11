@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const HelloWorldPlugin = require('./build/plugins/hello-world-plugin');
+const ScriptTsPlugin = require('./build/plugins/script-ts-plugin.js');
 
 module.exports = {
   entry: {
@@ -42,6 +44,12 @@ module.exports = {
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
+    }),
+    new HelloWorldPlugin({
+      enable: true,
+    }),
+    new ScriptTsPlugin({
+      enable: true,
     }),
   ],
   optimization: {
